@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_149ac68a5671017df15187443d041461 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <div style="position:fixed; bottom:10px; left:10px; z-index:9999; background:rgba(0,0,0,0.7); padding:5px 10px; border-radius:8px; color:white; font-size:10px;">
+        <div><span style="background:#1a9850; display:inline-block; width:10px; height:10px; border-radius:2px;"></span> Very Positive</div>
+        <div><span style="background:#a6d96a; display:inline-block; width:10px; height:10px; border-radius:2px;"></span> Positive</div>
+        <div><span style="background:#fdae61; display:inline-block; width:10px; height:10px; border-radius:2px;"></span> Negative</div>
+        <div><span style="background:#d73027; display:inline-block; width:10px; height:10px; border-radius:2px;"></span> Very Negative</div>
+    </div>
+    
+    
+    <div style="position:fixed; top:10px; left:10px; z-index:9999; background:white; padding:8px 15px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.2);">
+        <a href="index.html" style="text-decoration:none; color:#333; font-weight:bold;">← Back to Languages</a>
+    </div>
+    
+    
+            <div class="folium-map" id="map_149ac68a5671017df15187443d041461" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_149ac68a5671017df15187443d041461 = L.map(
+                "map_149ac68a5671017df15187443d041461",
+                {
+                    center: [-25.0, 20.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fa721cba7cb366618315ba25f17a8dfb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 3, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_fa721cba7cb366618315ba25f17a8dfb.addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var marker_d9508bea7ec1ca2f19745b859f330e02 = L.marker(
+                [33.886917, 9.537499],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_4074df4e4c49446876f1315ba117d1b0 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eTunisia\u003c/div\u003e"});
+            marker_d9508bea7ec1ca2f19745b859f330e02.setIcon(div_icon_4074df4e4c49446876f1315ba117d1b0);
+        
+    
+        var popup_8bab20f3310f8cfe3628457889483e8b = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_2a75672ff5c2c0ca36a2129df4020a81 = $(`<div id="html_2a75672ff5c2c0ca36a2129df4020a81" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Tunisia</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Politics and Governance<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Tunisia, a small country located in North Africa, has been making headlines for various reasons. In the world of sports, Tunisian footballer Ayoub Makhfaoui was recently announced as the new recruit for the Tunisia U20 team (Headline 431). The tea</div>         </div>         </div>`)[0];
+                popup_8bab20f3310f8cfe3628457889483e8b.setContent(html_2a75672ff5c2c0ca36a2129df4020a81);
+            
+        
+
+        marker_d9508bea7ec1ca2f19745b859f330e02.bindPopup(popup_8bab20f3310f8cfe3628457889483e8b)
+        ;
+
+        
+    
+    
+            var marker_6ce0a873654c16fba1d791dc0491f08a = L.marker(
+                [15.454166, 30.217636],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_21d79d820f2c608b2f928382b7123476 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSudan\u003c/div\u003e"});
+            marker_6ce0a873654c16fba1d791dc0491f08a.setIcon(div_icon_21d79d820f2c608b2f928382b7123476);
+        
+    
+        var popup_f2f8f244f791f7161411d11069d8c867 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_09ab14aa58eaa0fa6756618b90812f81 = $(`<div id="html_09ab14aa58eaa0fa6756618b90812f81" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">Sudan</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The sun was setting over the vast expanse of South Sudan, casting a golden glow over the parched landscape. The country, which had been plagued by civil war for decades, seemed to be on the brink of collapse.</p><p></p><p>In 2018, a peace agreemen</div>         </div>         </div>`)[0];
+                popup_f2f8f244f791f7161411d11069d8c867.setContent(html_09ab14aa58eaa0fa6756618b90812f81);
+            
+        
+
+        marker_6ce0a873654c16fba1d791dc0491f08a.bindPopup(popup_f2f8f244f791f7161411d11069d8c867)
+        ;
+
+        
+    
+    
+            var marker_32d040de147d0148be0b2ab1f981b29d = L.marker(
+                [-27.559482, 22.937506],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_09c3602641cfd793591c01e833a76b56 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSouth Africa\u003c/div\u003e"});
+            marker_32d040de147d0148be0b2ab1f981b29d.setIcon(div_icon_09c3602641cfd793591c01e833a76b56);
+        
+    
+        var popup_b484e6566c5c16e03eba2b4947f6134d = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_1531aded694f258599d01f8a1127ee03 = $(`<div id="html_1531aded694f258599d01f8a1127ee03" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">South Africa</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Economy and Business<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>South Africa, a country known for its diverse wildlife and rich cultural heritage, has been making headlines lately. From politics to healthcare, conservation efforts to technology, South Africa is at the forefront of many significant developments</div>         </div>         </div>`)[0];
+                popup_b484e6566c5c16e03eba2b4947f6134d.setContent(html_1531aded694f258599d01f8a1127ee03);
+            
+        
+
+        marker_32d040de147d0148be0b2ab1f981b29d.bindPopup(popup_b484e6566c5c16e03eba2b4947f6134d)
+        ;
+
+        
+    
+    
+            var marker_d1293e0959bc2389bf23a6d0afc05a32 = L.marker(
+                [1.373333, 32.290275],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_f4f61c25d4d46eacf7b7240218a27b8b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eUganda\u003c/div\u003e"});
+            marker_d1293e0959bc2389bf23a6d0afc05a32.setIcon(div_icon_f4f61c25d4d46eacf7b7240218a27b8b);
+        
+    
+        var popup_4c0ca989603efa3d0154f91de9637935 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_7ca1eb20d2aeb69da1d835aaa9e8e316 = $(`<div id="html_7ca1eb20d2aeb69da1d835aaa9e8e316" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Uganda</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Crime and Law<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the heart of East Africa, Uganda has long been a country of contrasts. On one hand, it boasts breathtaking natural beauty, with lush mountains and pristine lakes that attract tourists from around the world. However, beneath its idyllic surface,</div>         </div>         </div>`)[0];
+                popup_4c0ca989603efa3d0154f91de9637935.setContent(html_7ca1eb20d2aeb69da1d835aaa9e8e316);
+            
+        
+
+        marker_d1293e0959bc2389bf23a6d0afc05a32.bindPopup(popup_4c0ca989603efa3d0154f91de9637935)
+        ;
+
+        
+    
+    
+            var marker_ff1918c848509e6beafbf83bf243fec6 = L.marker(
+                [15.454166, -14.452362],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_1972b86b327fda8f8fbeeb7580ab0e9b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSenegal\u003c/div\u003e"});
+            marker_ff1918c848509e6beafbf83bf243fec6.setIcon(div_icon_1972b86b327fda8f8fbeeb7580ab0e9b);
+        
+    
+        var popup_6a99efee2f654b9d74ad1df5b8196b66 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_fe48f931c986c15efe380c510b0c5667 = $(`<div id="html_fe48f931c986c15efe380c510b0c5667" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Senegal</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Social Media Trends<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Senegal, a West African nation known for its rich cultural heritage and stunning beaches, has been making headlines in recent times for a mix of positive and concerning developments. At the heart of it all is the country's football team, which rec</div>         </div>         </div>`)[0];
+                popup_6a99efee2f654b9d74ad1df5b8196b66.setContent(html_fe48f931c986c15efe380c510b0c5667);
+            
+        
+
+        marker_ff1918c848509e6beafbf83bf243fec6.bindPopup(popup_6a99efee2f654b9d74ad1df5b8196b66)
+        ;
+
+        
+    
+    
+            var marker_a6fa75a04f11c23d7a5fcd2539fcc16b = L.marker(
+                [6.876991, 31.306978],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_633f9676a4abd0a61d914e0b28e59ad5 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSouth Sudan\u003c/div\u003e"});
+            marker_a6fa75a04f11c23d7a5fcd2539fcc16b.setIcon(div_icon_633f9676a4abd0a61d914e0b28e59ad5);
+        
+    
+        var popup_9688608ab7d25537fd6dd279c812b86d = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_4af713da55785323a3c7143b0bc2f34b = $(`<div id="html_4af713da55785323a3c7143b0bc2f34b" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">South Sudan</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>South Sudan, the youngest nation in Africa, has been embroiled in turmoil since its independence from Sudan in 2011. The country's fragile peace process has been threatened by various crises, including ongoing conflict, displacement, and economic </div>         </div>         </div>`)[0];
+                popup_9688608ab7d25537fd6dd279c812b86d.setContent(html_4af713da55785323a3c7143b0bc2f34b);
+            
+        
+
+        marker_a6fa75a04f11c23d7a5fcd2539fcc16b.bindPopup(popup_9688608ab7d25537fd6dd279c812b86d)
+        ;
+
+        
+    
+    
+            var marker_806e7b4e70db5a8b502cb26ee9b4b893 = L.marker(
+                [17.570692, -3.996166],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_df5405636b228ae1dadae7d8869aeeb9 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#d73027; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eMali\u003c/div\u003e"});
+            marker_806e7b4e70db5a8b502cb26ee9b4b893.setIcon(div_icon_df5405636b228ae1dadae7d8869aeeb9);
+        
+    
+        var popup_8cb2eafa7f7fdb8faf9e92885f8af61d = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_9f436db9aa49efc8cb8425657315bc39 = $(`<div id="html_9f436db9aa49efc8cb8425657315bc39" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#d73027;">Mali</b><br>             <div style="border-bottom:2px solid #d73027; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#d73027;">very negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The Sahel region of West Africa has long been a hotbed of instability, with countries like Mali struggling to maintain control over their territories. The current crisis in Mali began in 2023 when the country's military junta expelled the United N</div>         </div>         </div>`)[0];
+                popup_8cb2eafa7f7fdb8faf9e92885f8af61d.setContent(html_9f436db9aa49efc8cb8425657315bc39);
+            
+        
+
+        marker_806e7b4e70db5a8b502cb26ee9b4b893.bindPopup(popup_8cb2eafa7f7fdb8faf9e92885f8af61d)
+        ;
+
+        
+    
+    
+            var marker_414e78820279f847b10f96b951d7450a = L.marker(
+                [17.607789, 8.081666],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_c129822cbe2fc2e2e8bebe0314d02084 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eNiger\u003c/div\u003e"});
+            marker_414e78820279f847b10f96b951d7450a.setIcon(div_icon_c129822cbe2fc2e2e8bebe0314d02084);
+        
+    
+        var popup_c89ff8585dd01460551ed79b80fa7daa = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_f2bcd6b5624d11291d55b525ce3682ee = $(`<div id="html_f2bcd6b5624d11291d55b525ce3682ee" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">Niger</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the heart of West Africa, a country on the brink of chaos is struggling to maintain stability. Niger, a landlocked nation with a population of over 25 million people, has been plagued by terrorism, banditry, and climate change.</p><p></p><p>The</div>         </div>         </div>`)[0];
+                popup_c89ff8585dd01460551ed79b80fa7daa.setContent(html_f2bcd6b5624d11291d55b525ce3682ee);
+            
+        
+
+        marker_414e78820279f847b10f96b951d7450a.bindPopup(popup_c89ff8585dd01460551ed79b80fa7daa)
+        ;
+
+        
+    
+    
+            var marker_c66e58663b99d0f81f53ffdb238ddb37 = L.marker(
+                [9.081999, 6.602781],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_2015c6ad140f0a3101b6cd1ba2dbc72e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eNigeria\u003c/div\u003e"});
+            marker_c66e58663b99d0f81f53ffdb238ddb37.setIcon(div_icon_2015c6ad140f0a3101b6cd1ba2dbc72e);
+        
+    
+        var popup_d27f5fd5c0e220bc5df525da639a4bcf = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_18041de9e9a2c5830090fa0ba08d3611 = $(`<div id="html_18041de9e9a2c5830090fa0ba08d3611" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Nigeria</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Politics and Governance<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Nigeria, a country located in West Africa, has been grappling with various challenges that have had significant impacts on its citizens and the international community.</p><p></p><p>In recent years, Nigeria has faced increasing scrutiny over human</div>         </div>         </div>`)[0];
+                popup_d27f5fd5c0e220bc5df525da639a4bcf.setContent(html_18041de9e9a2c5830090fa0ba08d3611);
+            
+        
+
+        marker_c66e58663b99d0f81f53ffdb238ddb37.bindPopup(popup_d27f5fd5c0e220bc5df525da639a4bcf)
+        ;
+
+        
+    
+    
+            var marker_2169428544ffd60c8caa7bf5e8f1e20b = L.marker(
+                [26.3351, 17.228331],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_02243a6beddd2df2107aea376626a744 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eLibya\u003c/div\u003e"});
+            marker_2169428544ffd60c8caa7bf5e8f1e20b.setIcon(div_icon_02243a6beddd2df2107aea376626a744);
+        
+    
+        var popup_1aacabdeb21a5634220df167b92d0aa5 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_7ccb8a873d45a96afe0b2fb1733cdc37 = $(`<div id="html_7ccb8a873d45a96afe0b2fb1733cdc37" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Libya</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Global partnerships<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Libya, a country plagued by conflict and instability for decades, has seen its fair share of tragic events in recent months. One such incident that has left a lasting impact on the international community is the capsizing of a boat carrying Sudane</div>         </div>         </div>`)[0];
+                popup_1aacabdeb21a5634220df167b92d0aa5.setContent(html_7ccb8a873d45a96afe0b2fb1733cdc37);
+            
+        
+
+        marker_2169428544ffd60c8caa7bf5e8f1e20b.bindPopup(popup_1aacabdeb21a5634220df167b92d0aa5)
+        ;
+
+        
+    
+    
+            var marker_48775c148a4a2bcabb97da71b478a389 = L.marker(
+                [6.611111, -1.023194],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_c0fe82193866dd8837f579e70f166076 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eGhana\u003c/div\u003e"});
+            marker_48775c148a4a2bcabb97da71b478a389.setIcon(div_icon_c0fe82193866dd8837f579e70f166076);
+        
+    
+        var popup_a86287cf6ffd17506cea08a392d5246b = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_24fc9f7572a0e7a098f09fbb31f670ef = $(`<div id="html_24fc9f7572a0e7a098f09fbb31f670ef" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Ghana</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Global partnerships<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Ghana, a country with a rich cultural heritage and stunning natural beauty, has been making headlines in recent times for its innovative approaches to development, economic growth, and sports.</p><p></p><p>On the business front, drone food deliver</div>         </div>         </div>`)[0];
+                popup_a86287cf6ffd17506cea08a392d5246b.setContent(html_24fc9f7572a0e7a098f09fbb31f670ef);
+            
+        
+
+        marker_48775c148a4a2bcabb97da71b478a389.bindPopup(popup_a86287cf6ffd17506cea08a392d5246b)
+        ;
+
+        
+    
+    
+            var marker_356d04542887ed61884d77e8a1e7fe7f = L.marker(
+                [-0.023559, 35.529562],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_7f8ab0fd3b0f5d0ebf35f8deb7fc1914 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eKenya\u003c/div\u003e"});
+            marker_356d04542887ed61884d77e8a1e7fe7f.setIcon(div_icon_7f8ab0fd3b0f5d0ebf35f8deb7fc1914);
+        
+    
+        var popup_d9de4b3395f88420d75943b948b6a94e = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_57a65b63b900955add31c1d8255fe757 = $(`<div id="html_57a65b63b900955add31c1d8255fe757" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Kenya</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Local Heroes<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the heart of East Africa, a land of vibrant cultures and breathtaking landscapes, Kenya has emerged as a rising star on the global stage. From its lush avocado farms to its stunning natural beauty, this country is full of surprises.</p><p></p><</div>         </div>         </div>`)[0];
+                popup_d9de4b3395f88420d75943b948b6a94e.setContent(html_57a65b63b900955add31c1d8255fe757);
+            
+        
+
+        marker_356d04542887ed61884d77e8a1e7fe7f.bindPopup(popup_d9de4b3395f88420d75943b948b6a94e)
+        ;
+
+        
+    
+    
+            var marker_5d37efe26785293f03e08690256bff22 = L.marker(
+                [-19.015438, 29.154857],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_a215ac1ab304b4e741d1cf069d7bdde6 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eZimbabwe\u003c/div\u003e"});
+            marker_5d37efe26785293f03e08690256bff22.setIcon(div_icon_a215ac1ab304b4e741d1cf069d7bdde6);
+        
+    
+        var popup_438aa1274df05b3bcec639e22619e885 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_23ab24fce1a63cee929990715fc3d385 = $(`<div id="html_23ab24fce1a63cee929990715fc3d385" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Zimbabwe</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Policies and Reforms<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Zimbabwe, a country known for its rich natural resources and resilient people, has faced numerous challenges in recent years. One of the most pressing issues is its economy, which has been struggling due to hyperinflation and limited access to for</div>         </div>         </div>`)[0];
+                popup_438aa1274df05b3bcec639e22619e885.setContent(html_23ab24fce1a63cee929990715fc3d385);
+            
+        
+
+        marker_5d37efe26785293f03e08690256bff22.bindPopup(popup_438aa1274df05b3bcec639e22619e885)
+        ;
+
+        
+    
+    
+            var marker_fc783086a806fdc66a732e064314cfa2 = L.marker(
+                [-1.940278, 29.873888],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_0bde19798356818e49c3a24b986c76d7 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eRwanda\u003c/div\u003e"});
+            marker_fc783086a806fdc66a732e064314cfa2.setIcon(div_icon_0bde19798356818e49c3a24b986c76d7);
+        
+    
+        var popup_571b4e33bd9ca14276114a4a66f77f5e = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_159b08b68386abca60d616d85bac43f7 = $(`<div id="html_159b08b68386abca60d616d85bac43f7" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Rwanda</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sanctions<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the heart of Africa, a country with a reputation for stability and progress has been making headlines in recent years. Rwanda, a small nation with a population of just over 12 million people, has emerged as a rising star on the continent.</p><p</div>         </div>         </div>`)[0];
+                popup_571b4e33bd9ca14276114a4a66f77f5e.setContent(html_159b08b68386abca60d616d85bac43f7);
+            
+        
+
+        marker_fc783086a806fdc66a732e064314cfa2.bindPopup(popup_571b4e33bd9ca14276114a4a66f77f5e)
+        ;
+
+        
+    
+    
+            var marker_58b0b932ac4d83647a50a602b77864fc = L.marker(
+                [16.002082, -24.013197],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_0c0553f13a0e4117cefb3d65baad9fbe = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eCape Verde\u003c/div\u003e"});
+            marker_58b0b932ac4d83647a50a602b77864fc.setIcon(div_icon_0c0553f13a0e4117cefb3d65baad9fbe);
+        
+    
+        var popup_c8ef58790be944cede1c0da1989bb86c = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_229784aa31f0a162948bac2625f95c0f = $(`<div id="html_229784aa31f0a162948bac2625f95c0f" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Cape Verde</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sports and Entertainment<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Cape Verde, a small island nation off the coast of West Africa, has been making headlines around the world in recent months. The country's national football team, which is known as the "Giant from the Cape Verde Islands," was expected to compete i</div>         </div>         </div>`)[0];
+                popup_c8ef58790be944cede1c0da1989bb86c.setContent(html_229784aa31f0a162948bac2625f95c0f);
+            
+        
+
+        marker_58b0b932ac4d83647a50a602b77864fc.bindPopup(popup_c8ef58790be944cede1c0da1989bb86c)
+        ;
+
+        
+    
+    
+            var marker_385b5b1a54240ce757492fb8377c1755 = L.marker(
+                [-29.609988, 28.233608],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_ddc42223ff31b8729d5d737f163e27fd = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eLesotho\u003c/div\u003e"});
+            marker_385b5b1a54240ce757492fb8377c1755.setIcon(div_icon_ddc42223ff31b8729d5d737f163e27fd);
+        
+    
+        var popup_57a27aa33a0a85b81a99f3518fc0dc62 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_e82414eb043fcabe812775889cedb70f = $(`<div id="html_e82414eb043fcabe812775889cedb70f" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Lesotho</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sports and Entertainment<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Lesotho, a small country nestled in the mountains of southern Africa, has been making waves on the world stage with its innovative infrastructure projects and commitment to education. One such project that has created over 1,200 jobs is the Senqu </div>         </div>         </div>`)[0];
+                popup_57a27aa33a0a85b81a99f3518fc0dc62.setContent(html_e82414eb043fcabe812775889cedb70f);
+            
+        
+
+        marker_385b5b1a54240ce757492fb8377c1755.bindPopup(popup_57a27aa33a0a85b81a99f3518fc0dc62)
+        ;
+
+        
+    
+    
+            var marker_f16630728e3020aeceb596fdfd594063 = L.marker(
+                [26.820553, 29.873888],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_1867288be004c789bd69f9b04a7f3557 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eEgypt\u003c/div\u003e"});
+            marker_f16630728e3020aeceb596fdfd594063.setIcon(div_icon_1867288be004c789bd69f9b04a7f3557);
+        
+    
+        var popup_b8d6e995d430fae54ccda4f79da963bb = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_c4478fab326a6edc33d83b0b92421343 = $(`<div id="html_c4478fab326a6edc33d83b0b92421343" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Egypt</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Investment<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Egypt, a country with a rich history and diverse culture, has been making headlines in recent times. On one hand, the government has taken steps to modernize its infrastructure and services, making life easier for its citizens.</p><p></p><p>The Eg</div>         </div>         </div>`)[0];
+                popup_b8d6e995d430fae54ccda4f79da963bb.setContent(html_c4478fab326a6edc33d83b0b92421343);
+            
+        
+
+        marker_f16630728e3020aeceb596fdfd594063.bindPopup(popup_b8d6e995d430fae54ccda4f79da963bb)
+        ;
+
+        
+    
+    
+            var marker_50c34d1fd02700fddde4377998c71819 = L.marker(
+                [6.611111, 20.939444],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_1deb356dc7c6eb6bc1daf07fa960d72b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#d73027; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eCAR\u003c/div\u003e"});
+            marker_50c34d1fd02700fddde4377998c71819.setIcon(div_icon_1deb356dc7c6eb6bc1daf07fa960d72b);
+        
+    
+        var popup_0bd4f46d5d2a0dcfd2c6d7d380915909 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_b8ae6fb8abe63faace56263301804b16 = $(`<div id="html_b8ae6fb8abe63faace56263301804b16" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#d73027;">CAR</b><br>             <div style="border-bottom:2px solid #d73027; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#d73027;">very negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The Central African Republic, a small landlocked country in the heart of Africa, has been plagued by turmoil and instability for decades. The latest turn of events suggests that Moscow's ambitions to expand its influence in the region are facing g</div>         </div>         </div>`)[0];
+                popup_0bd4f46d5d2a0dcfd2c6d7d380915909.setContent(html_b8ae6fb8abe63faace56263301804b16);
+            
+        
+
+        marker_50c34d1fd02700fddde4377998c71819.bindPopup(popup_0bd4f46d5d2a0dcfd2c6d7d380915909)
+        ;
+
+        
+    
+    
+            var marker_2753ff7e3a0933e52d9bcd7275bc3934 = L.marker(
+                [-22.328474, 21.758664],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_1054deec6f09a29713439c79e37fd446 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eBotswana\u003c/div\u003e"});
+            marker_2753ff7e3a0933e52d9bcd7275bc3934.setIcon(div_icon_1054deec6f09a29713439c79e37fd446);
+        
+    
+        var popup_6bc8bf853777c5fc65d503e538dc2fb3 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_cf2f033c9649d090e8c30fc04d36f6bd = $(`<div id="html_cf2f033c9649d090e8c30fc04d36f6bd" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Botswana</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the scorching savannas of southern Africa, a country named Botswana has been making headlines for its remarkable achievements in athletics, economic stability, and cultural heritage. The nation's talented sprinters have taken the world by storm</div>         </div>         </div>`)[0];
+                popup_6bc8bf853777c5fc65d503e538dc2fb3.setContent(html_cf2f033c9649d090e8c30fc04d36f6bd);
+            
+        
+
+        marker_2753ff7e3a0933e52d9bcd7275bc3934.bindPopup(popup_6bc8bf853777c5fc65d503e538dc2fb3)
+        ;
+
+        
+    
+    
+            var marker_675de281c5f556cc90c183bd91bb6fa9 = L.marker(
+                [5.152149, 9.537499],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_cc5a80200badb47f872c75163bd17056 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eCameroon\u003c/div\u003e"});
+            marker_675de281c5f556cc90c183bd91bb6fa9.setIcon(div_icon_cc5a80200badb47f872c75163bd17056);
+        
+    
+        var popup_7179c0b1168ef081485e2de96ee4fa3b = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_516a795e1c6c7e530ff11ef41a0c24c6 = $(`<div id="html_516a795e1c6c7e530ff11ef41a0c24c6" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Cameroon</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Transport<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Cameroon, a country located in Central Africa, has been making headlines recently for various reasons. The first one is Exercise Obangame Express, which closed its 15th iteration. This maritime exercise is an annual event that brings together nava</div>         </div>         </div>`)[0];
+                popup_7179c0b1168ef081485e2de96ee4fa3b.setContent(html_516a795e1c6c7e530ff11ef41a0c24c6);
+            
+        
+
+        marker_675de281c5f556cc90c183bd91bb6fa9.bindPopup(popup_7179c0b1168ef081485e2de96ee4fa3b)
+        ;
+
+        
+    
+    
+            var marker_39d3cdee485d99a5d26e5f8e1680b8a4 = L.marker(
+                [10.825138, 2.315834],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_f25d8cda6910d5e692b28bb952be9dfa = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eBenin\u003c/div\u003e"});
+            marker_39d3cdee485d99a5d26e5f8e1680b8a4.setIcon(div_icon_f25d8cda6910d5e692b28bb952be9dfa);
+        
+    
+        var popup_497d06eeb70103e800b440163bf70ecd = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_e2a04e0192beb15b204ffec2c9848734 = $(`<div id="html_e2a04e0192beb15b204ffec2c9848734" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Benin</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Music<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The small West African nation of Benin has been making waves in recent months, with a new era dawning under its leadership. Romuald Wadagni is set to be sworn in as the country's president on May 24, marking a significant shift in the nation's gov</div>         </div>         </div>`)[0];
+                popup_497d06eeb70103e800b440163bf70ecd.setContent(html_e2a04e0192beb15b204ffec2c9848734);
+            
+        
+
+        marker_39d3cdee485d99a5d26e5f8e1680b8a4.bindPopup(popup_497d06eeb70103e800b440163bf70ecd)
+        ;
+
+        
+    
+    
+            var marker_fef1bad8c5356c181e1053ffea91619c = L.marker(
+                [-13.254308, 24.684866],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_f8b678603e7eaf986bc6031d58809fd4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eZambia\u003c/div\u003e"});
+            marker_fef1bad8c5356c181e1053ffea91619c.setIcon(div_icon_f8b678603e7eaf986bc6031d58809fd4);
+        
+    
+        var popup_ebb4e4c0e0f3bc917e6881e07c4e0aff = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_091d76f208cb42607c09d2656eb854f0 = $(`<div id="html_091d76f208cb42607c09d2656eb854f0" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">Zambia</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Human Rights<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the landlocked country of Zambia, the rule of law seemed to have taken a backseat in recent times. The news of ex-President's body being ordered by court to be returned to a funeral home sparked a bizarre dispute that exposed the country's deep</div>         </div>         </div>`)[0];
+                popup_ebb4e4c0e0f3bc917e6881e07c4e0aff.setContent(html_091d76f208cb42607c09d2656eb854f0);
+            
+        
+
+        marker_fef1bad8c5356c181e1053ffea91619c.bindPopup(popup_ebb4e4c0e0f3bc917e6881e07c4e0aff)
+        ;
+
+        
+    
+    
+            var marker_c5035eb42d7d550f09bafd3b8268a707 = L.marker(
+                [28.033886, 1.659626],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_2b65421cdf113e8feb26326d24bf3129 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eAlgeria\u003c/div\u003e"});
+            marker_c5035eb42d7d550f09bafd3b8268a707.setIcon(div_icon_2b65421cdf113e8feb26326d24bf3129);
+        
+    
+        var popup_c8ca3fbea8cd445e971ab160a2519a84 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_dc8be7d8fbaa52fdc8b8c200524d1eee = $(`<div id="html_dc8be7d8fbaa52fdc8b8c200524d1eee" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Algeria</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Global partnerships<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the vast expanse of North Africa, a country named Algeria has been making headlines in recent times. From securing its position in international organizations to quashing human rights concerns and strengthening ties with major powers like Russi</div>         </div>         </div>`)[0];
+                popup_c8ca3fbea8cd445e971ab160a2519a84.setContent(html_dc8be7d8fbaa52fdc8b8c200524d1eee);
+            
+        
+
+        marker_c5035eb42d7d550f09bafd3b8268a707.bindPopup(popup_c8ca3fbea8cd445e971ab160a2519a84)
+        ;
+
+        
+    
+    
+            var marker_6f3a0a086337194b0c82fdbd1c434d2d = L.marker(
+                [8.460555, -11.779889],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_3bd6f4169604f382de23e95dff6d99ff = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSierra Leone\u003c/div\u003e"});
+            marker_6f3a0a086337194b0c82fdbd1c434d2d.setIcon(div_icon_3bd6f4169604f382de23e95dff6d99ff);
+        
+    
+        var popup_c451153ba67a532e56c17aa06e50b40a = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_e24769ea15feb4ad5deb4a14808649fa = $(`<div id="html_e24769ea15feb4ad5deb4a14808649fa" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Sierra Leone</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Corporate News<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Sierra Leone, a small West African nation, has been making headlines in recent months for its ambitious projects and initiatives that aim to boost the country's economy and connectivity.</p><p></p><p>One of the most notable developments is Project</div>         </div>         </div>`)[0];
+                popup_c451153ba67a532e56c17aa06e50b40a.setContent(html_e24769ea15feb4ad5deb4a14808649fa);
+            
+        
+
+        marker_6f3a0a086337194b0c82fdbd1c434d2d.bindPopup(popup_c451153ba67a532e56c17aa06e50b40a)
+        ;
+
+        
+    
+    
+            var marker_80149be24890c1a359b38c10e6caca39 = L.marker(
+                [31.791702, -9.429499],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_45ba72a1ae3affeff7a2dbee05dfcbff = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eMorocco\u003c/div\u003e"});
+            marker_80149be24890c1a359b38c10e6caca39.setIcon(div_icon_45ba72a1ae3affeff7a2dbee05dfcbff);
+        
+    
+        var popup_56745a0ae01572204bee05a2fa2ac154 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_9dcfb6c46f5362e2a53d5d7d1eeaf29d = $(`<div id="html_9dcfb6c46f5362e2a53d5d7d1eeaf29d" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Morocco</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Global partnerships<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Morocco, a country known for its rich culture and stunning landscapes, has been making headlines around the world. From sports to business, politics, and space exploration, this North African nation continues to capture global attention.</p><p></p</div>         </div>         </div>`)[0];
+                popup_56745a0ae01572204bee05a2fa2ac154.setContent(html_9dcfb6c46f5362e2a53d5d7d1eeaf29d);
+            
+        
+
+        marker_80149be24890c1a359b38c10e6caca39.bindPopup(popup_56745a0ae01572204bee05a2fa2ac154)
+        ;
+
+        
+    
+    
+            var marker_3938f968fb086f4ed02b3448555ba0cd = L.marker(
+                [-13.254308, 34.301525],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_e30cb8b17d6f8aff97a6b53a0112af45 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eMalawi\u003c/div\u003e"});
+            marker_3938f968fb086f4ed02b3448555ba0cd.setIcon(div_icon_e30cb8b17d6f8aff97a6b53a0112af45);
+        
+    
+        var popup_ac421f4c8d7f5d88a983bde0d26479ac = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_e28c05add21ba94a156c156d93751aa2 = $(`<div id="html_e28c05add21ba94a156c156d93751aa2" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Malawi</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Global partnerships<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the small country of Malawi, nestled in southeastern Africa, a complex tapestry of economic challenges and environmental concerns is being woven. The nation's economy has been on shaky ground for years, with high inflation rates and stagnant gr</div>         </div>         </div>`)[0];
+                popup_ac421f4c8d7f5d88a983bde0d26479ac.setContent(html_e28c05add21ba94a156c156d93751aa2);
+            
+        
+
+        marker_3938f968fb086f4ed02b3448555ba0cd.bindPopup(popup_ac421f4c8d7f5d88a983bde0d26479ac)
+        ;
+
+        
+    
+    
+            var marker_57dd9cd262253cd20a3c08dfbbe77272 = L.marker(
+                [9.145, 37.906193],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_a306147016dcf9fedff35c4673f0a6b9 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eEthiopia\u003c/div\u003e"});
+            marker_57dd9cd262253cd20a3c08dfbbe77272.setIcon(div_icon_a306147016dcf9fedff35c4673f0a6b9);
+        
+    
+        var popup_5f87952607dca431bd675606c40d64e4 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_317771a824ecfb50c6b4dd8448d9df57 = $(`<div id="html_317771a824ecfb50c6b4dd8448d9df57" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Ethiopia</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Local Heroes<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Ethiopia, a land of resilience and progress, has been making headlines in recent times. The country's determination to build a better future for its citizens is evident in various endeavors.</p><p></p><p>Recently, the government announced plans to</div>         </div>         </div>`)[0];
+                popup_5f87952607dca431bd675606c40d64e4.setContent(html_317771a824ecfb50c6b4dd8448d9df57);
+            
+        
+
+        marker_57dd9cd262253cd20a3c08dfbbe77272.bindPopup(popup_5f87952607dca431bd675606c40d64e4)
+        ;
+
+        
+    
+    
+            var marker_e8895afb670b8afaa8d01ebb1ceffd1c = L.marker(
+                [17.607789, -14.452362],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_d5c3a7cb4c0c44191e0486a338adc2a0 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eMauritania\u003c/div\u003e"});
+            marker_e8895afb670b8afaa8d01ebb1ceffd1c.setIcon(div_icon_d5c3a7cb4c0c44191e0486a338adc2a0);
+        
+    
+        var popup_34324edb87e7e68a9ce29ef7baa76eda = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_987dd1d9a96129e02b778d326d37d8d3 = $(`<div id="html_987dd1d9a96129e02b778d326d37d8d3" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Mauritania</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Refugees<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Mauritania, a small West African country nestled in the Sahara Desert, has been at the forefront of regional and international attention in recent years. The country's strategic location has made it a hub for trade, energy, and security.</p><p></p</div>         </div>         </div>`)[0];
+                popup_34324edb87e7e68a9ce29ef7baa76eda.setContent(html_987dd1d9a96129e02b778d326d37d8d3);
+            
+        
+
+        marker_e8895afb670b8afaa8d01ebb1ceffd1c.bindPopup(popup_34324edb87e7e68a9ce29ef7baa76eda)
+        ;
+
+        
+    
+    
+            var marker_858449fef45f3bc678a36659400e3d4c = L.marker(
+                [-6.369028, 30.802498],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_0a38116cd453e353c58f2467f149c2dd = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eTanzania\u003c/div\u003e"});
+            marker_858449fef45f3bc678a36659400e3d4c.setIcon(div_icon_0a38116cd453e353c58f2467f149c2dd);
+        
+    
+        var popup_495376b7244c08e96e19cea7a7cd3b3e = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_1f05dce13dde69a89e9a492b454704b3 = $(`<div id="html_1f05dce13dde69a89e9a492b454704b3" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Tanzania</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Politics and Governance<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Tanzania, a country located in East Africa, has been making headlines recently for various reasons. In a shocking discovery, scientists have uncovered a huge tectonic boundary under Mozambique and Tanzania, which could potentially lead to the cont</div>         </div>         </div>`)[0];
+                popup_495376b7244c08e96e19cea7a7cd3b3e.setContent(html_1f05dce13dde69a89e9a492b454704b3);
+            
+        
+
+        marker_858449fef45f3bc678a36659400e3d4c.bindPopup(popup_495376b7244c08e96e19cea7a7cd3b3e)
+        ;
+
+        
+    
+    
+            var marker_28aea8ac31fcbc533336f77a821aee30 = L.marker(
+                [6.428055, -9.429499],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_281150b2c1f9b86071ee4b09405c9ff2 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eLiberia\u003c/div\u003e"});
+            marker_28aea8ac31fcbc533336f77a821aee30.setIcon(div_icon_281150b2c1f9b86071ee4b09405c9ff2);
+        
+    
+        var popup_9ef20881e041611bb64a8718b5e23fe3 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_8f5eaece7de46e6aa2d25a48d79e8da2 = $(`<div id="html_8f5eaece7de46e6aa2d25a48d79e8da2" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Liberia</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Politics and Governance<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Liberia, a country in West Africa, has been at the center of international attention for several months. The nation's 3rd anniversary of the establishment of the Precious Pearl Ireland Foundation was marked with great fanfare, a testament to how f</div>         </div>         </div>`)[0];
+                popup_9ef20881e041611bb64a8718b5e23fe3.setContent(html_8f5eaece7de46e6aa2d25a48d79e8da2);
+            
+        
+
+        marker_28aea8ac31fcbc533336f77a821aee30.bindPopup(popup_9ef20881e041611bb64a8718b5e23fe3)
+        ;
+
+        
+    
+    
+            var marker_16a9913b327c7ef382e802d11b18c6ff = L.marker(
+                [10.825138, -12.885834],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_279453ae7c015a089161d7231ea55b6a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eGuinea\u003c/div\u003e"});
+            marker_16a9913b327c7ef382e802d11b18c6ff.setIcon(div_icon_279453ae7c015a089161d7231ea55b6a);
+        
+    
+        var popup_aae5b5172492ba3c14200bbf5f4b62eb = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_ca8a40d99d761c6866176215a1e8003e = $(`<div id="html_ca8a40d99d761c6866176215a1e8003e" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Guinea</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Global partnerships<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Deep in the heart of West Africa lies a country known for its lush green landscapes, rich mineral deposits, and vibrant culture. Guinea, a nation with a storied past and uncertain future, has been making headlines recently.</p><p></p><p>The first </div>         </div>         </div>`)[0];
+                popup_aae5b5172492ba3c14200bbf5f4b62eb.setContent(html_ca8a40d99d761c6866176215a1e8003e);
+            
+        
+
+        marker_16a9913b327c7ef382e802d11b18c6ff.bindPopup(popup_aae5b5172492ba3c14200bbf5f4b62eb)
+        ;
+
+        
+    
+    
+            var marker_12702b134730b91227ceb56dede8e2c0 = L.marker(
+                [-11.202692, 15.291944],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_831c0c90523f827eb111242810a8e9f1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eAngola\u003c/div\u003e"});
+            marker_12702b134730b91227ceb56dede8e2c0.setIcon(div_icon_831c0c90523f827eb111242810a8e9f1);
+        
+    
+        var popup_a2cd8d3206b3b40c607d987284352031 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_95075f2426fc3ab746269676e1961b99 = $(`<div id="html_95075f2426fc3ab746269676e1961b99" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Angola</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Energy<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Angola, a country located in southern Africa, has been making significant strides in various sectors over the past few years. In 2026, Sonangol, the state-owned oil company, took home the Emerald Sponsorship award at African Energy Week (AEW), fur</div>         </div>         </div>`)[0];
+                popup_a2cd8d3206b3b40c607d987284352031.setContent(html_95075f2426fc3ab746269676e1961b99);
+            
+        
+
+        marker_12702b134730b91227ceb56dede8e2c0.bindPopup(popup_a2cd8d3206b3b40c607d987284352031)
+        ;
+
+        
+    
+    
+            var marker_2c9ea68d3fa4e8ff31d1c02d890acc68 = L.marker(
+                [-17.665695, 35.529562],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_e790d81a0111c29b09d6a46a80b37775 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eMozambique\u003c/div\u003e"});
+            marker_2c9ea68d3fa4e8ff31d1c02d890acc68.setIcon(div_icon_e790d81a0111c29b09d6a46a80b37775);
+        
+    
+        var popup_c6548273d5f0ae6657594d1ba6d942fa = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_aa5dc20b971859232fb836ea3f55fa9d = $(`<div id="html_aa5dc20b971859232fb836ea3f55fa9d" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Mozambique</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Energy<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Mozambique, a country located in Southeastern Africa, has been facing numerous challenges in recent years. The government has been working tirelessly to address these issues and strengthen its economy.</p><p></p><p>One of the most significant proj</div>         </div>         </div>`)[0];
+                popup_c6548273d5f0ae6657594d1ba6d942fa.setContent(html_aa5dc20b971859232fb836ea3f55fa9d);
+            
+        
+
+        marker_2c9ea68d3fa4e8ff31d1c02d890acc68.bindPopup(popup_c6548273d5f0ae6657594d1ba6d942fa)
+        ;
+
+        
+    
+    
+            var marker_34f483a9abf9c0e885abcf703cfa35c5 = L.marker(
+                [5.152149, 46.199616],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_471c3b4fad3b00b4b03835cdafada154 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSomalia\u003c/div\u003e"});
+            marker_34f483a9abf9c0e885abcf703cfa35c5.setIcon(div_icon_471c3b4fad3b00b4b03835cdafada154);
+        
+    
+        var popup_c1bb706ec724ea0e5b1f329f90f72553 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_fb5552c332a8fe93877e808c88b0269d = $(`<div id="html_fb5552c332a8fe93877e808c88b0269d" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">Somalia</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Somalia, a country nestled in the Horn of Africa, has long been plagued by conflict, poverty, and drought. Despite its rich cultural heritage and strategic location, Somalia has struggled to rebuild itself after decades of turmoil.</p><p></p><p>On</div>         </div>         </div>`)[0];
+                popup_c1bb706ec724ea0e5b1f329f90f72553.setContent(html_fb5552c332a8fe93877e808c88b0269d);
+            
+        
+
+        marker_34f483a9abf9c0e885abcf703cfa35c5.bindPopup(popup_c1bb706ec724ea0e5b1f329f90f72553)
+        ;
+
+        
+    
+    
+            var marker_3c03d1ec0a5c6ac7180ee5d9f0cf6d31 = L.marker(
+                [-19.015438, 15.291944],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_e30c5e4b3817956fec021904bfbf4810 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eNamibia\u003c/div\u003e"});
+            marker_3c03d1ec0a5c6ac7180ee5d9f0cf6d31.setIcon(div_icon_e30c5e4b3817956fec021904bfbf4810);
+        
+    
+        var popup_8bd440d722ea6ae393aab964c6a327c8 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_8b9b470cd831dbed2bdb7cab496c87fc = $(`<div id="html_8b9b470cd831dbed2bdb7cab496c87fc" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Namibia</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sports and Entertainment<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Namibia, a country located in southern Africa, has been making headlines in recent years for its rich natural resources, growing economy, and commitment to sustainability. One of the most significant developments is C29's expansion into the countr</div>         </div>         </div>`)[0];
+                popup_8bd440d722ea6ae393aab964c6a327c8.setContent(html_8b9b470cd831dbed2bdb7cab496c87fc);
+            
+        
+
+        marker_3c03d1ec0a5c6ac7180ee5d9f0cf6d31.bindPopup(popup_8bd440d722ea6ae393aab964c6a327c8)
+        ;
+
+        
+    
+    
+            var marker_bd4d7c2be456f44ce40c3631996fc219 = L.marker(
+                [-0.023559, 15.291944],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_85f23b0d3c117b60447c1360dce6183a = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eCongo\u003c/div\u003e"});
+            marker_bd4d7c2be456f44ce40c3631996fc219.setIcon(div_icon_85f23b0d3c117b60447c1360dce6183a);
+        
+    
+        var popup_0120473ece2b8a0fd3a7da0aa5bd55ee = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_82d5d5c85a1a9e03a9baa58a9386cd11 = $(`<div id="html_82d5d5c85a1a9e03a9baa58a9386cd11" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Congo</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sanctions<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The Democratic Republic of Congo (DRC), a vast and resource-rich country in Central Africa, has been embroiled in turmoil for decades. Despite its rich natural resources, including diamonds, gold, and copper, the DRC has struggled to maintain stab</div>         </div>         </div>`)[0];
+                popup_0120473ece2b8a0fd3a7da0aa5bd55ee.setContent(html_82d5d5c85a1a9e03a9baa58a9386cd11);
+            
+        
+
+        marker_bd4d7c2be456f44ce40c3631996fc219.bindPopup(popup_0120473ece2b8a0fd3a7da0aa5bd55ee)
+        ;
+
+        
+    
+    
+            var marker_569398c665f7e9c3a7e82f86db43b8fb = L.marker(
+                [-26.522503, 31.465866],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_9562be2794b73f4126bcd73e3185b228 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eEswatini\u003c/div\u003e"});
+            marker_569398c665f7e9c3a7e82f86db43b8fb.setIcon(div_icon_9562be2794b73f4126bcd73e3185b228);
+        
+    
+        var popup_810b36fdf09cfca2496867537a3803f7 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_a71c408a1fff655a3066c9b78c39ac06 = $(`<div id="html_a71c408a1fff655a3066c9b78c39ac06" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Eswatini</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Politics and Governance<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The tiny kingdom of Eswatini, officially known as Swaziland, has been making headlines in recent months for its unique blend of tradition and modernization. At the heart of these developments is its relationship with Taiwan, a country that has bec</div>         </div>         </div>`)[0];
+                popup_810b36fdf09cfca2496867537a3803f7.setContent(html_a71c408a1fff655a3066c9b78c39ac06);
+            
+        
+
+        marker_569398c665f7e9c3a7e82f86db43b8fb.bindPopup(popup_810b36fdf09cfca2496867537a3803f7)
+        ;
+
+        
+    
+    
+            var marker_7b6ead816f7fe105f8e0a0e5f2a8c7c6 = L.marker(
+                [-3.373056, 29.918886],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_cbc7c3588f147b6c75851694eb21d43b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eBurundi\u003c/div\u003e"});
+            marker_7b6ead816f7fe105f8e0a0e5f2a8c7c6.setIcon(div_icon_cbc7c3588f147b6c75851694eb21d43b);
+        
+    
+        var popup_3595ffcddc084e3cc73ceec75544ba11 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_d0d3bfa6e459dc1065b531237462e89b = $(`<div id="html_d0d3bfa6e459dc1065b531237462e89b" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Burundi</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sanctions<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Burundi, a small landlocked country in East Africa, has been in the news lately for various reasons. However, it's worth noting that despite the numerous headlines about Burundi, most of them seem to be unrelated or outside the scope of US sanctio</div>         </div>         </div>`)[0];
+                popup_3595ffcddc084e3cc73ceec75544ba11.setContent(html_d0d3bfa6e459dc1065b531237462e89b);
+            
+        
+
+        marker_7b6ead816f7fe105f8e0a0e5f2a8c7c6.bindPopup(popup_3595ffcddc084e3cc73ceec75544ba11)
+        ;
+
+        
+    
+    
+            var marker_7228655a4b0bb0e530657e3af852d9fa = L.marker(
+                [-4.038333, 21.758664],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_c7261e021ff4d0d743b03e470201cc32 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eDRC\u003c/div\u003e"});
+            marker_7228655a4b0bb0e530657e3af852d9fa.setIcon(div_icon_c7261e021ff4d0d743b03e470201cc32);
+        
+    
+        var popup_af9513624141174d8b1dc5cb4f7cd82d = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_d80b8869382059b1e2ff389f7683c7df = $(`<div id="html_d80b8869382059b1e2ff389f7683c7df" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">DRC</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sanctions<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The Democratic Republic of Congo (DRC) has been at the center of international attention for decades, plagued by conflict, corruption, and human rights abuses. But one figure who has been consistently criticized by Western powers is former Preside</div>         </div>         </div>`)[0];
+                popup_af9513624141174d8b1dc5cb4f7cd82d.setContent(html_d80b8869382059b1e2ff389f7683c7df);
+            
+        
+
+        marker_7228655a4b0bb0e530657e3af852d9fa.bindPopup(popup_af9513624141174d8b1dc5cb4f7cd82d)
+        ;
+
+        
+    
+    
+            var marker_e2e4c599eb9c1eba44dba7491b9b136a = L.marker(
+                [-4.679574, 55.491977],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_f53aa6d78cbd1b96f9967a22f705d761 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSeychelles\u003c/div\u003e"});
+            marker_e2e4c599eb9c1eba44dba7491b9b136a.setIcon(div_icon_f53aa6d78cbd1b96f9967a22f705d761);
+        
+    
+        var popup_0338a1b12862071e373f1c54aef2c607 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_86d0f05789b59b169950e7752c600d9e = $(`<div id="html_86d0f05789b59b169950e7752c600d9e" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Seychelles</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Fashion and Lifestyle<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The Seychelles, a 115-island archipelago off the coast of East Africa, is a tropical paradise known for its stunning beaches, crystal-clear waters, and diverse wildlife. The country has been making headlines in recent times, from exciting tourism </div>         </div>         </div>`)[0];
+                popup_0338a1b12862071e373f1c54aef2c607.setContent(html_86d0f05789b59b169950e7752c600d9e);
+            
+        
+
+        marker_e2e4c599eb9c1eba44dba7491b9b136a.bindPopup(popup_0338a1b12862071e373f1c54aef2c607)
+        ;
+
+        
+    
+    
+            var marker_8ee48bcbe9d2faa0d7dde936ff3480cd = L.marker(
+                [-18.766947, 46.869107],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_44e90fcc0b510db710890226e2df14da = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eMadagascar\u003c/div\u003e"});
+            marker_8ee48bcbe9d2faa0d7dde936ff3480cd.setIcon(div_icon_44e90fcc0b510db710890226e2df14da);
+        
+    
+        var popup_bcd6dd9cea8e4a9e6d4f676b066e2a0e = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_91be6de9c0208fb8171c93e02952c014 = $(`<div id="html_91be6de9c0208fb8171c93e02952c014" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Madagascar</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Economy and Business<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the vast expanse of the Indian Ocean, there exists an island shrouded in mystery, a world hidden from the rest of humanity for millions of years. Madagascar, the fourth-largest island nation, has long been a source of fascination for scientists</div>         </div>         </div>`)[0];
+                popup_bcd6dd9cea8e4a9e6d4f676b066e2a0e.setContent(html_91be6de9c0208fb8171c93e02952c014);
+            
+        
+
+        marker_8ee48bcbe9d2faa0d7dde936ff3480cd.bindPopup(popup_bcd6dd9cea8e4a9e6d4f676b066e2a0e)
+        ;
+
+        
+    
+    
+            var marker_b20ad8fb6f57522fe521bd65dd8c2e71 = L.marker(
+                [12.238333, -1.561593],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_16eb0783305223921521067773f926c1 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eBurkina Faso\u003c/div\u003e"});
+            marker_b20ad8fb6f57522fe521bd65dd8c2e71.setIcon(div_icon_16eb0783305223921521067773f926c1);
+        
+    
+        var popup_495984e0d01b05717d9c996aabb07924 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_d2153dfb19e02fb4784c97f7e6ad16aa = $(`<div id="html_d2153dfb19e02fb4784c97f7e6ad16aa" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Burkina Faso</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Burkina Faso, a small West African nation, has been embroiled in turmoil for years. The country's recent transformation from a democratically governed state to a military-led regime has left many wondering about its future.</p><p></p><p>In 2023, t</div>         </div>         </div>`)[0];
+                popup_495984e0d01b05717d9c996aabb07924.setContent(html_d2153dfb19e02fb4784c97f7e6ad16aa);
+            
+        
+
+        marker_b20ad8fb6f57522fe521bd65dd8c2e71.bindPopup(popup_495984e0d01b05717d9c996aabb07924)
+        ;
+
+        
+    
+    
+            var marker_cfd7589a6dd8c0545fef996016720edb = L.marker(
+                [8.619543, 0.824782],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_6e0a0020ca2a14763d1dd272eeb059b3 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eTogo\u003c/div\u003e"});
+            marker_cfd7589a6dd8c0545fef996016720edb.setIcon(div_icon_6e0a0020ca2a14763d1dd272eeb059b3);
+        
+    
+        var popup_75162b7096865f49c6b1d447c425f30d = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_25726f7a8422e03fd507554d3f591e67 = $(`<div id="html_25726f7a8422e03fd507554d3f591e67" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Togo</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Art and Culture<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Togo, a small West African nation, has been making headlines in recent months for its efforts to boost its economy, improve education, and strengthen its digital capabilities. The country has launched the Campus 42 Lomé initiative, which aims to p</div>         </div>         </div>`)[0];
+                popup_75162b7096865f49c6b1d447c425f30d.setContent(html_25726f7a8422e03fd507554d3f591e67);
+            
+        
+
+        marker_cfd7589a6dd8c0545fef996016720edb.bindPopup(popup_75162b7096865f49c6b1d447c425f30d)
+        ;
+
+        
+    
+    
+            var marker_4bdffee036b33d70afb4a3816dfe7365 = L.marker(
+                [15.454166, 17.228331],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_bd87299379d88fee26b375d3f8fc4d13 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eChad\u003c/div\u003e"});
+            marker_4bdffee036b33d70afb4a3816dfe7365.setIcon(div_icon_bd87299379d88fee26b375d3f8fc4d13);
+        
+    
+        var popup_72f8dce73330e67a814909d62ab54975 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_1ccb1e0bb038967cde66e137047446db = $(`<div id="html_1ccb1e0bb038967cde66e137047446db" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">Chad</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> War and Conflict<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the heart of Central Africa, a country known as Chad is facing numerous challenges that threaten its stability and development. Despite its rich natural resources and strategic location, Chad has struggled to overcome internal conflicts, securi</div>         </div>         </div>`)[0];
+                popup_72f8dce73330e67a814909d62ab54975.setContent(html_1ccb1e0bb038967cde66e137047446db);
+            
+        
+
+        marker_4bdffee036b33d70afb4a3816dfe7365.bindPopup(popup_72f8dce73330e67a814909d62ab54975)
+        ;
+
+        
+    
+    
+            var marker_87620e8baccef8aea92f2b175978f59e = L.marker(
+                [24.215527, -12.885834],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_e569a920bd300088cdc54cef76255cef = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eWestern Sahara\u003c/div\u003e"});
+            marker_87620e8baccef8aea92f2b175978f59e.setIcon(div_icon_e569a920bd300088cdc54cef76255cef);
+        
+    
+        var popup_30f885704a094bb960eed24408f6b275 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_a640a32fec4582b28bfe00d9121a69bc = $(`<div id="html_a640a32fec4582b28bfe00d9121a69bc" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Western Sahara</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Politics and Governance<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The Western Sahara, a disputed territory in North Africa, has been at the center of international attention for decades. The latest developments in this region have left many wondering about the future of the Sahrawi people and their quest for sel</div>         </div>         </div>`)[0];
+                popup_30f885704a094bb960eed24408f6b275.setContent(html_a640a32fec4582b28bfe00d9121a69bc);
+            
+        
+
+        marker_87620e8baccef8aea92f2b175978f59e.bindPopup(popup_30f885704a094bb960eed24408f6b275)
+        ;
+
+        
+    
+    
+            var marker_8f1daff1eba776cc057dcc62bb87d330 = L.marker(
+                [7.946527, -5.54708],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_44a4778a8176278eea7366ae7a2777b3 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eIvory Coast\u003c/div\u003e"});
+            marker_8f1daff1eba776cc057dcc62bb87d330.setIcon(div_icon_44a4778a8176278eea7366ae7a2777b3);
+        
+    
+        var popup_ac64f074f80c73dab815dd6abe455cc8 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_a3d3b460fdf888eb2ff3e5fa6e7ec5bb = $(`<div id="html_a3d3b460fdf888eb2ff3e5fa6e7ec5bb" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Ivory Coast</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sports and Entertainment<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the heart of West Africa, the small nation of Côte d'Ivoire (also known as Ivory Coast) has been making headlines for various reasons. The country's football team, particularly the Black Starlets, has been on a roll, with their recent 4-0 victo</div>         </div>         </div>`)[0];
+                popup_ac64f074f80c73dab815dd6abe455cc8.setContent(html_a3d3b460fdf888eb2ff3e5fa6e7ec5bb);
+            
+        
+
+        marker_8f1daff1eba776cc057dcc62bb87d330.bindPopup(popup_ac64f074f80c73dab815dd6abe455cc8)
+        ;
+
+        
+    
+    
+            var marker_3d60d8e7fd2e24d07bb3feb8a003573a = L.marker(
+                [-20.348404, 57.552152],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_6248397d72d086669b39a8da5999df00 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eMauritius\u003c/div\u003e"});
+            marker_3d60d8e7fd2e24d07bb3feb8a003573a.setIcon(div_icon_6248397d72d086669b39a8da5999df00);
+        
+    
+        var popup_98fd322424b49da93e53391248d9598e = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_b64ffd9df856b04afe89b4d87c1b5956 = $(`<div id="html_b64ffd9df856b04afe89b4d87c1b5956" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Mauritius</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sports and Entertainment<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The sun-kissed island nation of Mauritius was abuzz with excitement as the world's top golfers descended upon the picturesque course for the inaugural MCB Ladies Classic. The tournament, which had drawn a stellar field of Indian golfers, promised </div>         </div>         </div>`)[0];
+                popup_98fd322424b49da93e53391248d9598e.setContent(html_b64ffd9df856b04afe89b4d87c1b5956);
+            
+        
+
+        marker_3d60d8e7fd2e24d07bb3feb8a003573a.bindPopup(popup_98fd322424b49da93e53391248d9598e)
+        ;
+
+        
+    
+    
+            var marker_315aa8232520351328b426bf44f6a62b = L.marker(
+                [13.443182, -15.310139],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_c6683b883eb37470279a2712188530cc = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eGambia\u003c/div\u003e"});
+            marker_315aa8232520351328b426bf44f6a62b.setIcon(div_icon_c6683b883eb37470279a2712188530cc);
+        
+    
+        var popup_513821e280b70850a576f418c54b269b = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_825f289181489bbd9ea6d16c405837db = $(`<div id="html_825f289181489bbd9ea6d16c405837db" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Gambia</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Policies and Reforms<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the West African nation of Gambia, a country with a rich history and culture, progress has been made in various sectors, but challenges persist. The government, led by President Adama Barrow, has been working to improve the lives of its citizen</div>         </div>         </div>`)[0];
+                popup_513821e280b70850a576f418c54b269b.setContent(html_825f289181489bbd9ea6d16c405837db);
+            
+        
+
+        marker_315aa8232520351328b426bf44f6a62b.bindPopup(popup_513821e280b70850a576f418c54b269b)
+        ;
+
+        
+    
+    
+            var marker_7fcda757347b7b095fc00aae49f63120 = L.marker(
+                [11.825138, 42.590275],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_79d8c759f8c508722084519ed46530cf = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eDjibouti\u003c/div\u003e"});
+            marker_7fcda757347b7b095fc00aae49f63120.setIcon(div_icon_79d8c759f8c508722084519ed46530cf);
+        
+    
+        var popup_790815881ac2a94a9dde3ba7b346e9d5 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_cc74f3df6f59db158e0cf0220ba3a3fd = $(`<div id="html_cc74f3df6f59db158e0cf0220ba3a3fd" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Djibouti</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Politics and Governance<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the Horn of Africa, a country with a strategic location on the Bab-el-Mandeb Strait, tensions have been brewing between regional powers and international interests. Djibouti, with its capital city of Djibouti City, has found itself at the cente</div>         </div>         </div>`)[0];
+                popup_790815881ac2a94a9dde3ba7b346e9d5.setContent(html_cc74f3df6f59db158e0cf0220ba3a3fd);
+            
+        
+
+        marker_7fcda757347b7b095fc00aae49f63120.bindPopup(popup_790815881ac2a94a9dde3ba7b346e9d5)
+        ;
+
+        
+    
+    
+            var marker_56f3833de9e80a69a3fa39fba884fe14 = L.marker(
+                [17.607789, 39.782334],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_9290fba073519384876f75d5fe003f53 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eEritrea\u003c/div\u003e"});
+            marker_56f3833de9e80a69a3fa39fba884fe14.setIcon(div_icon_9290fba073519384876f75d5fe003f53);
+        
+    
+        var popup_6c7fd5c76cd92c5be8a947f949797126 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_5b9bdae2c3a4c3d4573b2da8fbffc206 = $(`<div id="html_5b9bdae2c3a4c3d4573b2da8fbffc206" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Eritrea</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Education<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the small East African nation of Eritrea, a complex web of politics, propaganda, and human rights abuses has long been woven into its fabric. Despite being one of Africa's poorest countries, with an estimated GDP per capita of just $400, Eritre</div>         </div>         </div>`)[0];
+                popup_6c7fd5c76cd92c5be8a947f949797126.setContent(html_5b9bdae2c3a4c3d4573b2da8fbffc206);
+            
+        
+
+        marker_56f3833de9e80a69a3fa39fba884fe14.bindPopup(popup_6c7fd5c76cd92c5be8a947f949797126)
+        ;
+
+        
+    
+    
+            var marker_fb318cee557bffcd87a6c1c55fe00ced = L.marker(
+                [-0.803689, 9.537499],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_09dd76d4805288024f9a71d979661fbf = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eGabon\u003c/div\u003e"});
+            marker_fb318cee557bffcd87a6c1c55fe00ced.setIcon(div_icon_09dd76d4805288024f9a71d979661fbf);
+        
+    
+        var popup_399a8f44a18e91a332e7522c60d8fc95 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_0ca2638eba54dae262f07ee9831bdac9 = $(`<div id="html_0ca2638eba54dae262f07ee9831bdac9" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Gabon</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Energy<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Gabon, a small country located in central Africa, has been making headlines lately for its efforts to diversify its economy and address environmental concerns. The Organization of the Petroleum Exporting Countries (OPEC) Secretary General is set t</div>         </div>         </div>`)[0];
+                popup_399a8f44a18e91a332e7522c60d8fc95.setContent(html_0ca2638eba54dae262f07ee9831bdac9);
+            
+        
+
+        marker_fb318cee557bffcd87a6c1c55fe00ced.bindPopup(popup_399a8f44a18e91a332e7522c60d8fc95)
+        ;
+
+        
+    
+    
+            var marker_a1fb54c4d5cf5316b02c8560f95aeaf9 = L.marker(
+                [-11.875001, 43.872219],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_defc7024582255f319c3ab0564e9f8d4 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eComoros\u003c/div\u003e"});
+            marker_a1fb54c4d5cf5316b02c8560f95aeaf9.setIcon(div_icon_defc7024582255f319c3ab0564e9f8d4);
+        
+    
+        var popup_09987e4638c8f94aac863768ee9a4197 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_a3ae5cb67e94a7c8836629eb308e642d = $(`<div id="html_a3ae5cb67e94a7c8836629eb308e642d" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Comoros</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sports and Entertainment<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the small island nation of Comoros, nestled off the coast of East Africa, a complex web of international relations and sporting rivalries has been unfolding. Located strategically at the entrance to the Indian Ocean, the country's unique positi</div>         </div>         </div>`)[0];
+                popup_09987e4638c8f94aac863768ee9a4197.setContent(html_a3ae5cb67e94a7c8836629eb308e642d);
+            
+        
+
+        marker_a1fb54c4d5cf5316b02c8560f95aeaf9.bindPopup(popup_09987e4638c8f94aac863768ee9a4197)
+        ;
+
+        
+    
+    
+            var marker_e3493fcaa9a4fd1f7acc048f88b06991 = L.marker(
+                [1.650801, 10.267895],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_81130ccf81e426fe9ae60499d4a506d9 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#a6d96a; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eEquatorial Guinea\u003c/div\u003e"});
+            marker_e3493fcaa9a4fd1f7acc048f88b06991.setIcon(div_icon_81130ccf81e426fe9ae60499d4a506d9);
+        
+    
+        var popup_4c57dd7b285a6c9179c4468d82b22dee = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_ba221e824f3641724f5917a44e433d2d = $(`<div id="html_ba221e824f3641724f5917a44e433d2d" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#a6d96a;">Equatorial Guinea</b><br>             <div style="border-bottom:2px solid #a6d96a; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Religion and Spirituality<br>             <strong>📊 Sentiment:</strong> <span style="color:#a6d96a;">positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>In the small nation of Equatorial Guinea, a land rich in oil and minerals but struggling with poverty and inequality, the arrival of Pope Leo XIV was met with both hope and skepticism. As part of his Africa tour, the Pope visited Equatorial Guinea</div>         </div>         </div>`)[0];
+                popup_4c57dd7b285a6c9179c4468d82b22dee.setContent(html_ba221e824f3641724f5917a44e433d2d);
+            
+        
+
+        marker_e3493fcaa9a4fd1f7acc048f88b06991.bindPopup(popup_4c57dd7b285a6c9179c4468d82b22dee)
+        ;
+
+        
+    
+    
+            var marker_b4ba702d2761810edc50cd353e690b70 = L.marker(
+                [11.803749, -15.180413],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_66d53ab1f3ac88bb6e32c810954aa052 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#fdae61; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eGuinea Bissau\u003c/div\u003e"});
+            marker_b4ba702d2761810edc50cd353e690b70.setIcon(div_icon_66d53ab1f3ac88bb6e32c810954aa052);
+        
+    
+        var popup_388c16abeae5dab1f8ee83d3741af556 = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_96091d3c5fae87c0d2abfa2e87dd7693 = $(`<div id="html_96091d3c5fae87c0d2abfa2e87dd7693" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#fdae61;">Guinea Bissau</b><br>             <div style="border-bottom:2px solid #fdae61; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Economy and Business<br>             <strong>📊 Sentiment:</strong> <span style="color:#fdae61;">negative</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>The small West African nation of Guinea Bissau is facing a perfect storm of challenges. The country has consistently ranked as one of the poorest in the world, with its economy struggling to recover from years of instability and corruption.</p><p></div>         </div>         </div>`)[0];
+                popup_388c16abeae5dab1f8ee83d3741af556.setContent(html_96091d3c5fae87c0d2abfa2e87dd7693);
+            
+        
+
+        marker_b4ba702d2761810edc50cd353e690b70.bindPopup(popup_388c16abeae5dab1f8ee83d3741af556)
+        ;
+
+        
+    
+    
+            var marker_48b59d00ba2cf53c3b67c855279786fa = L.marker(
+                [0.255436, 6.602781],
+                {}
+            ).addTo(map_149ac68a5671017df15187443d041461);
+        
+    
+            var div_icon_515b903df9179c394b47fffcf9f57b5e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"background:#1a9850; padding:2px 8px; border-radius:12px; color:white; font-size:11px; white-space:nowrap; cursor:pointer;\"\u003eSao Tome and Principe\u003c/div\u003e"});
+            marker_48b59d00ba2cf53c3b67c855279786fa.setIcon(div_icon_515b903df9179c394b47fffcf9f57b5e);
+        
+    
+        var popup_489d564dffe4e2666d4e5436c8f90a3e = L.popup({"maxWidth": 350});
+
+        
+            
+                var html_548870e19ce4721881aad01e8a9e50e7 = $(`<div id="html_548870e19ce4721881aad01e8a9e50e7" style="width: 100.0%; height: 100.0%;">         <div style="min-width:220px; font-family:Arial; padding:5px;">             <b style="color:#1a9850;">Sao Tome and Principe</b><br>             <div style="border-bottom:2px solid #1a9850; margin:5px 0;"></div>             <strong>🔥 Theme:</strong> Sports and Entertainment<br>             <strong>📊 Sentiment:</strong> <span style="color:#1a9850;">very positive</span><br>             <div style="margin-top:8px; padding:5px; background:#f0f0f0; border-radius:5px;"><p>Sao Tome and Principe, a tiny island nation located off the coast of West Africa, has been making waves in recent months. The country's President, received credentials from Qatar's Ambassador, marking an important step in strengthening diplomatic </div>         </div>         </div>`)[0];
+                popup_489d564dffe4e2666d4e5436c8f90a3e.setContent(html_548870e19ce4721881aad01e8a9e50e7);
+            
+        
+
+        marker_48b59d00ba2cf53c3b67c855279786fa.bindPopup(popup_489d564dffe4e2666d4e5436c8f90a3e)
+        ;
+
+        
+    
+</script>
+</html>
