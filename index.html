@@ -8,7 +8,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: #efcc00;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -16,23 +16,23 @@
             padding: 20px;
         }
         .container { max-width: 900px; width: 100%; text-align: center; }
-        .title { color: white; margin-bottom: 50px; animation: fadeInDown 0.8s ease; }
+        .title { color: #333; margin-bottom: 50px; animation: fadeInDown 0.8s ease; }
         .title h1 { font-size: 2.5rem; margin-bottom: 15px; }
-        .title p { font-size: 1.1rem; opacity: 0.9; }
+        .title p { font-size: 1.1rem; opacity: 0.8; }
         .language-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 50px; animation: fadeInUp 0.8s ease; }
         .language-card {
             background: white; border-radius: 20px; padding: 35px 25px;
             transition: all 0.3s ease; text-decoration: none; display: block;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2); cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); cursor: pointer;
         }
-        .language-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+        .language-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
         .language-flag { font-size: 4.5rem; margin-bottom: 15px; }
-        .language-name { font-size: 1.8rem; font-weight: bold; margin-bottom: 8px; }
+        .language-name { font-size: 1.8rem; font-weight: bold; margin-bottom: 8px; color: #333; }
         .language-desc { color: #666; font-size: 0.9rem; }
         .card-en { border-top: 5px solid #1a9850; }
         .card-fr { border-top: 5px solid #0055a4; }
         .card-pt { border-top: 5px solid #009c3b; }
-        .stats { color: white; margin-top: 20px; font-size: 0.9rem; opacity: 0.7; }
+        .stats { color: #333; margin-top: 20px; font-size: 0.9rem; opacity: 0.7; }
         @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         @media (max-width: 768px) {
